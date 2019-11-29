@@ -25,14 +25,14 @@
   <?php include "sidebar.php" ?>
 
 <!-- Sign Up form start -->
-<h2 align="center">Signup Form</h2>
+<h1 align="center">Signup Form</h1>
 
 <form method="post" action="../login-system/register.php" class="sign_up_form" onsubmit="return phonenumber(this)">
 
   <div class="sign_up_container">
 
-    <input style="margin-left: 5%" type="radio" name="accountType" value="Personal" required>  Personal Account
-    <input style="margin-left: 30%" type="radio" name="accountType" value="Business" required>  Business Account <br><br>
+    <input style="margin-left: 5%" type="radio" name="account_type" value="Personal" required>  Personal Account
+    <input style="margin-left: 30%" type="radio" name="account_type" value="Business" required>  Business Account <br><br>
 
     <label><b>Name</b></label>
     <input  type="text" placeholder="Enter your name" name="username" required>

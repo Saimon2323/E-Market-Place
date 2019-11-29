@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.5.2
+-- version 4.7.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 29, 2019 at 09:27 PM
--- Server version: 10.1.21-MariaDB
--- PHP Version: 7.2.7
+-- Generation Time: Mar 26, 2018 at 05:31 AM
+-- Server version: 10.1.25-MariaDB
+-- PHP Version: 7.1.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -153,7 +155,6 @@ CREATE TABLE `delivery_info` (
 --
 
 INSERT INTO `delivery_info` (`id`, `sId`, `card`, `cardNumber`, `holderName`, `exDate`, `sCode`, `name`, `email`, `deliAddress`, `phone`) VALUES
-(52906700, 'uo0hsfrc7ng0a9afg7rocrh3tp', 'visa', '4146987456321456', 'Abid', '02/2026', '232', 'Abid', 'saimon.ctg@gmail.com', 'Nasirabad, Ctg', '01914560739'),
 (322468051, 'nna91p3a0t1lou5do4igkej042', 'master', '4146987456321123', 'M Irfan', '32', '456', 'M Irfanul Kalam Chowdhury', 'msifat5@gmail.com', '42/43 Equity Central, Momin Road', '01718339135'),
 (358180135, 'c75ikqk2elu5jku940438oedvb', 'visa', '4146985412365478', 'M Irfan', '02', '459', 'M Irfanul Kalam Chowdhury', 'msifat5@gmail.com', '42/43 Equity Central, Momin Road', '01718339135'),
 (418366133, 'c75ikqk2elu5jku940438oedvb', 'visa', '4146985412365478', 'M Irfan', '484', '459', 'M Irfanul Kalam Chowdhury', 'msifat5@gmail.com', '42/43 Equity Central, Momin Road', '01718339135'),
@@ -162,8 +163,7 @@ INSERT INTO `delivery_info` (`id`, `sId`, `card`, `cardNumber`, `holderName`, `e
 (1278926331, 'c75ikqk2elu5jku940438oedvb', 'amex', '4146321456987451', 'M Irfan', '484', '4888', 'M Irfanul Kalam Chowdhury', 'msifat5@gmail.com', '42/43 Equity Central, Momin Road', '01849958585'),
 (1477111444, 'c75ikqk2elu5jku940438oedvb', 'visa', '4146985412365478', 'M Irfan', '02/21', '4598', 'M Irfanul Kalam Chowdhury', 'msifat5@gmail.com', '42/43 Equity Central, Momin Road', '01718339135'),
 (1561335873, 'c75ikqk2elu5jku940438oedvb', 'amex', '4146321456987451', 'M Irfan', '484', '4888', 'M Irfanul Kalam Chowdhury', 'msifat5@gmail.com', '42/43 Equity Central, Momin Road', '01718339135'),
-(1825695665, 'nna91p3a0t1lou5do4igkej042', 'visa', '4146984578415478', 'M Irfan', '02/19', '325', 'M Irfanul Kalam Chowdhury', 'msifat5@gmail.com', '42/43 Equity Central, Momin Road', '01718339135'),
-(2102457211, 'uo0hsfrc7ng0a9afg7rocrh3tp', 'amex', '371599107031520', 'Saimon', '02/2021', '123', 'Muhammad Abid Hasan', 'saimon.ctg@gmail.com', 'Halishahar, Chattogram', '01682966471');
+(1825695665, 'nna91p3a0t1lou5do4igkej042', 'visa', '4146984578415478', 'M Irfan', '02/19', '325', 'M Irfanul Kalam Chowdhury', 'msifat5@gmail.com', '42/43 Equity Central, Momin Road', '01718339135');
 
 -- --------------------------------------------------------
 
@@ -195,7 +195,7 @@ CREATE TABLE `productlist` (
 
 INSERT INTO `productlist` (`id`, `shopName`, `email`, `productPic`, `productFor`, `productName`, `description`, `price`, `quantity`, `sellerQuantity`, `Day`, `Month`, `Year`, `boost`, `keyword`) VALUES
 (3, 'Pick n Pay', 'ahsaimon.ctg@gmail.com', '1518640117DP.jpg', 'Men\'s Fashion', 'sweater for man', 'Off blue sweater for man \r\nFull cotton.\r\nAll size available.', 500, 12, 12, '20', '3', '2018', 1, 'mensmansboysmales'),
-(16, 'Pick n Pay', 'ahsaimon.ctg@gmail.com', '15189673741NRJO577I.jpg', 'Men\'s Fashion', 'T-shirt for man blue', 'Blue  t-shirt for man - special Edition', 350, 3, 3, '30', '11', '19', 1, 'mensmansboysmales'),
+(16, 'Pick n Pay', 'ahsaimon.ctg@gmail.com', '15189673741NRJO577I.jpg', 'Men\'s Fashion', 'T-shirt for man blue', 'Blue  t-shirt for man - special Edition', 350, 4, 4, '25', '03', '18', 1, 'mensmansboysmales'),
 (17, 'Apple ', 'msifat5@gmail.com', '15189689721UGEDSEFN.jpg', 'Women\'s Fashion', 'Long Dress for Girl', 'Special Edition Long Dress for women', 7000, 10, 5, '21', '3', '2018', 0, 'womenswomansgirlsfemales'),
 (18, 'Apple ', 'msifat5@gmail.com', '151897129113ZIZJNP5.jpg', 'Men\'s Fashion', 'Navy blue t-shirt', 'Half sleeve t-shirt for man', 450, 14, 7, '20', '3', '2018', 1, 'mensmansboysmales'),
 (19, 'Yummy', 'msifat5@gmail.com', '15192239131A8LJPNK0.jpg', 'Men\'s Fashion', 'Shirt for man', 'Long sleeve formal Shirt for man - Special Edition.\r\nSize : M, S, L and XL available.\r\n', 600, 7, 9, '21', '3', '2018', 1, 'mensmansboysmales'),
@@ -203,14 +203,10 @@ INSERT INTO `productlist` (`id`, `shopName`, `email`, `productPic`, `productFor`
 (21, 'Pick n Pay', 'ahsaimon.ctg@gmail.com', '15192322481MVGHSYR2.jpg', 'Baby\'s Fashion', 'kids party dress', 'Beautiful party dress for children.\r\nComfortable. \r\nSize available.', 1000, 12, 2, '21', '3', '2018', 1, 'childrentoybaby'),
 (24, 'Apple ', 'msifat5@gmail.com', '15215283231L3XCNF23.jpg', 'Men\'s Fashion', 'T-Shirt', 'Gray color T-Shirt for man.', 320, 15, 7, '20', '3', '2018', 0, 'mensmansboysmales'),
 (25, 'Apple ', 'msifat5@gmail.com', '1521537526oppo As7.jpg', 'Phone and Tablets', 'Oppo A57', 'GENERAL:\r\nRelease date:	November 2016\r\nForm factor:	Touchscreen\r\nDimensions (mm):	149.10 x 72.90 x 7.65\r\nWeight (g)	:  147.00\r\nBattery capacity (mAh):	2900\r\nRemovable battery:	No\r\nColors:	Rose Gold, Gold\r\n\r\nDISPLAY:\r\nScreen size (inches):	5.20\r\nTouchscreen:	Yes\r\nResolution:	720x1280 pixels\r\n\r\nHARDWARE:\r\nProcessor:	1.4GHz octa-core\r\nProcessor make:	Qualcomm Snapdragon 435\r\nRAM:	3GB\r\nInternal storage:	32GB\r\nExpandable storage:	Yes\r\nExpandable storage type:	microSD\r\nExpandable storage up to (GB):	2', 18990, 7, 4, '20', '3', '2018', 0, 'phonemobilembltablet'),
-(26, 'Apple ', 'msifat5@gmail.com', '1521538743iphonex.png', 'Phone and Tablets', 'iPhone X', 'Display	5.8-inch (diagonal) all-screen OLED Multi-Touch display\r\nOS	iOS 11\r\nCamera	Primary- Dual 12 MP,secondary-7 MP\r\nCPU	Hexa-core\r\nBATTERY	Non-removable Li-Ion battery\r\nRAM	3GB\r\nROM	64/256 GB\r\nSensor	Face ID\r\nBarometer\r\n\r\nThree-axis gyro\r\n\r\nAccelerometer\r\n\r\nProximity sensor\r\n\r\nAmbient light sensor', 94476, 10, 0, '25', '03', '18', 1, 'phonemobilembltablet'),
+(26, 'Apple ', 'msifat5@gmail.com', '1521538743iphonex.png', 'Phone and Tablets', 'iPhone X', 'Display	5.8-inch (diagonal) all-screen OLED Multi-Touch display\r\nOS	iOS 11\r\nCamera	Primary- Dual 12 MP,secondary-7 MP\r\nCPU	Hexa-core\r\nBATTERY	Non-removable Li-Ion battery\r\nRAM	3GB\r\nROM	64/256 GB\r\nSensor	Face ID\r\nBarometer\r\n\r\nThree-axis gyro\r\n\r\nAccelerometer\r\n\r\nProximity sensor\r\n\r\nAmbient light sensor', 94476, 0, 0, '25', '03', '18', 1, 'phonemobilembltablet'),
 (27, 'Apple ', 'msifat5@gmail.com', '1521564374basketball.jpg', 'Sports and Travels', 'Basket Ball', 'Orange color Basket Ball.', 350, 6, 6, '24', '03', '18', 0, 'sportstravelsbastektballcricketbatfootball'),
 (28, 'Apple ', 'msifat5@gmail.com', '1521564673cricketbat.jpg', 'Sports and Travels', 'Cricket Bat', 'MRF cricket bat.', 550, 11, 11, '24', '03', '18', 0, 'sportstravelsbastektballcricketbatfootball'),
-(29, 'Apple ', 'msifat5@gmail.com', '1521603328mi 4x.jpg', 'Phone and Tablets', 'Mi 4x', 'Mi 4x\r\nRam: 2GB.\r\nStorage: 32GB.\r\nCamera: Rear: 13mp and Front: 5mp.', 10400, 6, NULL, NULL, NULL, NULL, 0, 'phonemobilembltablet'),
-(30, 'Boi Bhandar', 'abidsaimon2323@gmail.com', '157505681658542854_172413980341936_1181573764014407680_n.jpg', 'Others', 'Digital Image Processing [News]', 'Writer: Rafeal C.\r\nEdition: 12th.\r\nNews print.', 180, 10, NULL, NULL, NULL, NULL, 0, 'othersbook'),
-(33, 'Boi Bhandar', 'abidsaimon2323@gmail.com', '157500947351417385_621294401655199_936946187909464064_o.jpg', 'Others', 'Cracking the Coding Interview', 'Author: Gayle Laakmann.\r\nEdition: 6th.', 320, 18, 18, '30', '11', '19', 0, 'othersbook'),
-(34, 'Pick n Pay', 'ahsaimon.ctg@gmail.com', '1575055656for CV.jpeg', 'Men\'s Fashion', 'Cotton Panjaby', 'For man', 1650, 15, NULL, NULL, NULL, NULL, 0, 'mensmansboysmales'),
-(35, 'Boi Bhandar', 'abidsaimon2323@gmail.com', '1575056687Computer Programming First part.jpg', 'Others', 'Computer Programming (First Part)', 'Author: Subeen\r\nDimik.\r\nFirst Part', 190, 15, NULL, NULL, NULL, NULL, 0, 'othersbook');
+(29, 'Apple ', 'msifat5@gmail.com', '1521603328mi 4x.jpg', 'Phone and Tablets', 'Mi 4x', 'Mi 4x\r\nRam: 2GB.\r\nStorage: 32GB.\r\nCamera: Rear: 13mp and Front: 5mp.', 10400, 6, NULL, NULL, NULL, NULL, 0, 'phonemobilembltablet');
 
 -- --------------------------------------------------------
 
@@ -256,7 +252,6 @@ CREATE TABLE `sellerinfo` (
 --
 
 INSERT INTO `sellerinfo` (`email`, `address`, `category`, `postal_code`, `seller_photo`, `seller_nid`) VALUES
-('abidsaimon2323@gmail.com', 'Chattogram', 'Book', '4216', '1575008645logo.png', '1575008645Picture1.png'),
 ('ahsaimon.ctg@gmail.com', 'Halishahar, Chittagong, Bangladesh.', 'Apparel', '4216', '1518968495DP.jpg', '1518968495allah.jpg'),
 ('any@gmail.com', 'Cheragi pahar, Chittagong', 'Pet Item', '4300', '1518967759223.JPG', '1518967759allah.jpg'),
 ('msifat5@gmail.com', '42/43 Equity Central, Momin Road', 'Apparel', '4000', '1521524648IMG_5319.JPG', '1521524648IMG_6344.JPG');
@@ -281,7 +276,6 @@ CREATE TABLE `store` (
 --
 
 INSERT INTO `store` (`email`, `store`, `store_id`, `store_name`, `store_banner`, `store_description`) VALUES
-('abidsaimon2323@gmail.com', 1, 1305742819, 'Boi Bhandar', '1575008645fb_banner_2.png', 'Book Shop'),
 ('msifat5@gmail.com', 1, 1476664186, 'Apple ', '1521524648IMG_2185.JPG', 'Store Store Store Store Store Store'),
 ('ahsaimon.ctg@gmail.com', 1, 1894735621, 'Pick n Pay', '1518968495banner 2.jpg', 'Pick n Pay offers customerâ€™s fantastic quality clothing at the best prices. There is something for everyone in the family, from mom and dad to brother, sister and even baby.\r\n');
 
@@ -307,11 +301,10 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`account_type`, `name`, `email`, `phone`, `password`, `gender`, `hash`, `active`) VALUES
-('Business', 'Abid Saimon', 'abidsaimon2323@gmail.com', 1515221627, '$2y$10$XhvSVhXxIM7EA/EE.cSEEOyYPT0j.9FVWHBxg79.9b0CKLmHqLYPS', 'Male', '49182f81e6a13cf5eaa496d51fea6406', 1),
-('Business', 'Hasan', 'ahsaimon.ctg@gmail.com', 1515221627, '$2y$10$uWacQpQ0eMFr2yf6edPe4.aVs8.p8Rtc.Hn7pMtoWaBaZvVoEGW2y', 'Male', '846c260d715e5b854ffad5f70a516c88', 1),
+('Business', 'Hasan', 'ahsaimon.ctg@gmail.com', 1515221627, '$2y$10$.QdCG.ywv/HMDUUxg6qr5.e5jq1gEFvQtU81sbg5Uo1yHy2xzMcSu', 'Male', '846c260d715e5b854ffad5f70a516c88', 1),
 ('Business', 'irfan_sifat', 'msifat5@gmail.com', 1718339135, '$2y$10$fUDTbvzbLF2/9VlcJrIMruwGmkP7lePc1.OWpLFYNWAgcqKxbOqey', 'Male', '9f53d83ec0691550f7d2507d57f4f5a2', 1),
 ('Personal', 'M Irfanul Kalam Chowdhury', 'msifat6@gmail.com', 1718339135, '$2y$10$Are6VC0ocEgTm5HIQyNXLeLMKxixSNRCOOOr4plYNROAgNUgztuYG', 'Male', 'e2c0be24560d78c5e599c2a9c9d0bbd2', 0),
-('Personal', 'Saimon Storm', 'saimon.ctg@gmail.com', 1682966471, '$2y$10$ymuigh/Uf.5nT7fbUVRIEuSksy9vU55ubMcRnOBO2ra8rLY1BkpjS', 'Male', '310dcbbf4cce62f762a2aaa148d556bd', 1);
+('Personal', 'Hasan', 'saimon.ctg@gmail.com', 1822262323, '$2y$10$jje7El5/X9e3iv47MNvFV.fBs5NZwwNXctL7AtbJcJVzOzDCmchvi', 'Male', '84f7e69969dea92a925508f7c1f9579a', 1);
 
 --
 -- Indexes for dumped tables
@@ -385,7 +378,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `cartId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+  MODIFY `cartId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 --
 -- AUTO_INCREMENT for table `comment`
 --
@@ -400,12 +393,13 @@ ALTER TABLE `community`
 -- AUTO_INCREMENT for table `productlist`
 --
 ALTER TABLE `productlist`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 --
 -- AUTO_INCREMENT for table `revenue`
 --
 ALTER TABLE `revenue`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

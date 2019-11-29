@@ -50,7 +50,7 @@
 
     if ($nameErr=="" && $emailErr=="") {
       
-    $to = "msifat5@gmail.com"; // this is your Email address
+    $to = "saimon.ctg@gmail.com"; // this is your Email address
     $from = $_POST["email"]; // this is the sender's Email address
     $name = $_POST["fullname"];
     $subject = $_POST["subject"];

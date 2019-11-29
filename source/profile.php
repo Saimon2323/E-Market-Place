@@ -69,16 +69,16 @@ else {
             <div class="col-md-1">
                 <?php include "sidebar.php" ?>
 
-                <?php if (($_SESSION['account_type'])== 'Business') :?>
-              <a href="cp_seller.php"> <button class="btn btn-primary" style="margin: 20px; margin-left: 50px;border: none">update your profile</button></a>
+            <?php if (($_SESSION['account_type'])== 'Business') :?>
+              <a href="cp_seller.php"> <button class="btn btn-primary" style="margin: 20px; margin-left: 50px;border: none">Update your profile</button></a>
             </div>
-                      <?php endif; ?>
+            <?php endif; ?>
 
 
-              <?php if (($_SESSION['account_type'])== 'Personal') :?>
-              <a href="cp_buyer.php"> <button class="btn btn-primary" style="margin: 20px; margin-left: 50px;border: none">update your profile</button></a>
+            <?php if (($_SESSION['account_type'])== 'Personal') :?>
+              <a href="cp_buyer.php"> <button class="btn btn-primary" style="margin: 20px; margin-left: 50px;border: none">Update your profile</button></a>
             </div>
-              <?php endif; ?>
+            <?php endif; ?>
 
 
 
@@ -101,14 +101,15 @@ else {
 
 
                 <?php $_SESSION['email'] = $email ?>
-                    <a href="../login-system/delete.php"><button class="btn btn-default" style="margin-bottom: 20px" onclick="return confirm('Are you sure want to delete');">Delete Account</button></a>
+                    <a href="../login-system/delete.php"><button class="btn btn-default" style="margin-bottom: 20px" onclick="return confirm_delete()">Delete Account</button></a>
           </div>
           </div>
 
           <?php if (($_SESSION['account_type'])== 'Business') :?>
 
             <div style="margin-left: 85%;">
-              <a href="new_store_description.php"> <button <?php if ($active == '0'){ ?> disabled <?php   } ?> class="btn btn-primary"  style="margin: 20px;margin-right: 50px ;border: none;">go to store</button></a>
+              <a href="new_store_description.php"> <button <?php if ($active == '0'){ ?> disabled <?php   } ?> class="btn btn-primary"  style="margin: 20px;margin-right: 50px ;border: none;">Go to store</button>
+              </a>
             </div>
 
           <?php endif; ?>
@@ -118,6 +119,14 @@ else {
     
     <div style="position: fixed;bottom: 0;width: 100%;"><?php include "footer.php" ?></div>
 
+
+<script>
+  
+  function confirm_delete(){
+        return confirm("Are you sure you want to permanently delete this data?");
+    }
+
+</script>
 
 </body>
 </html>

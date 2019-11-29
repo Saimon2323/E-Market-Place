@@ -10,7 +10,7 @@ if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']==1){
 if(isset($_GET["submit"])){
 
     $to = $_SESSION['mail']; // this is your Email address
-    $from = "msifat5@gmail.com"; // this is the sender's Email address
+    $from = "saimon.ctg@gmail.com"; // this is the sender's Email address
     $subject = "Order Confirmed";
     $delId = $_SESSION['delId'];
     $name = $_SESSION['name'];

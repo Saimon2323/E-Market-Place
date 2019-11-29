@@ -21,7 +21,7 @@
 <!-- Custom CSS -->
 <link rel="stylesheet" type="text/css" href="../css/style.css">
 
-	<title>Craeting new store</title>
+	<title>Creating new store</title>
 </head>
 <body>
 
@@ -29,16 +29,14 @@
 		<?php include "sidebar.php" ?>
 
 	<div align="center" class="create_new_store">
-	<h2><b style="font-size: 30px">Name Your Store</b></h2>
-	<p>Choose a name for your store. We use this name to refer to<br> your store here in the Dashboard.</p>
+		<h2><b style="font-size: 30px">Name Your Store</b></h2>
+		<p>Choose a name for your store. We use this name to refer to<br> your store here in the Dashboard.</p>
 
-	<form method="post" action="../login-system/store-register.php">
-	<input type="text" name="store_name" placeholder="Store Name">
-	<br>
-	<a href="new_store_description.php"><button> Submit </button> </a>
-	</form>
+		<form method="post" action="../login-system/store-register.php">
+			<input type="text" name="store_name" placeholder="Store Name"><br>
+			<button>Submit</button>
+		</form>
 	</div>
-
 
 <!-- Address info start -->																		
 <?php include "address.php" ?>  

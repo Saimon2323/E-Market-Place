@@ -86,13 +86,16 @@ session_start();
 		
 		<label>Address</label><br>
 		<input type="text" name="address" placeholder="address" required><br>
+
 		<label>Shop Category</label><br>
 		<input type="text" name="category" placeholder="category" required><br>
+
 		<label>Postal code</label><br>
 		<input type="number" name="Postalcode" placeholder="postal code" required><br>
 
 		<label ><b>Store Banner</b></label><br>
 		 <img  class="store_banner_image" id="store_banner_upload" onchange="readURL3(this)" src="../images/store_banner.png"><br>
+		 
 		 <input style="width: 100%;border: none" type="file" id="store_banner_image_select" name="storePic" class="filestyle" data-btnClass="btn btn-primary" accept=".jpg,.png" required><br>
 
 		<label>Store Description</label><br>
@@ -109,7 +112,7 @@ session_start();
 		 <input style="width: 100%;" type="file" accept=".jpg,.png" id="imgInp2" name="sellerDoc" class="filestyle" data-btnClass="btn btn-primary" required><br>	
 		</div>
 		<div class="complete_profile_seller">
-			<button type="submit" name="submit" >submit</button>
+			<button type="submit" name="submit" >Submit</button>
 		</div>
 	</div>
 </form>

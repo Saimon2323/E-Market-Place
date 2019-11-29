@@ -66,7 +66,7 @@ session_start();
 		<input type="number" name="Pcode" placeholder="postal code" required>
 		</div>
 		<div>
-			<button class="complete_profile_buyer_button" type="submit" name="cpbbtn" style="width: 10%">submit</button>
+			<button class="complete_profile_buyer_button" type="submit" name="cpbbtn" style="width: 10%">Submit</button>
 		</div>
 	</form>
 	

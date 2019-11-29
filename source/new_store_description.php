@@ -253,7 +253,7 @@ box-shadow: 2px 2px 20px;
             <!-- <p><?= $row['description']; ?></p> -->
               <h4>price: <?= $row['price']; ?>tk </h4>
               <a href="add_product.php?edit=<?= $row['id']; ?>" class='glyphicon glyphicon-pencil btn btn-success'>Edit</a>
-              <a href="../seller/storeProductList.php?del=<?= $row['id']; ?>" class='glyphicon glyphicon-remove btn btn-danger'>Delete</a>
+              <a href="../seller/storeProductList.php?del=<?= $row['id']; ?>" class='glyphicon glyphicon-remove btn btn-danger' onclick="return confirm_delete()">Delete</a>
           </div>
         </div>
 
@@ -290,6 +290,13 @@ box-shadow: 2px 2px 20px;
 
 <?php include "footer.php" ?>
 
+<script>
+  
+  function confirm_delete(){
+        return confirm("Are you sure you want to permanently delete this data?");
+    }
+
+</script>
 
 </body>
 </html>

@@ -147,7 +147,7 @@ include "sidebar.php";
     <a href="product_page.php?pId=<?= $row['id']; ?>"> <?php echo "<img style=\"width:100%;height:220px;\" src='../seller/productPic/".$row['productPic']."'>"; ?> </a>
     <p style="font-size: 10px;"><?= $row['shopName']; ?></p>
     </div>
-     <p style="width: 220px"><b><a href=""><?= $row['productName']; ?></a></b></p>
+     <p style="width: 220px"><b><a href="product_page.php?pId=<?= $row['id']; ?>"><?= $row['productName']; ?></a></b></p>
      <span data-currency-iso="BDT">৳</span> <?= $row['price']; ?><br>
 
  
@@ -180,7 +180,7 @@ include "sidebar.php";
     <a href="product_page.php?pId=<?= $row['id']; ?>"> <?php echo "<img style=\"width:100%;height:220px;\" src='../seller/productPic/".$row['productPic']."'>"; ?> </a>
     <p style="font-size: 10px;"><?= $row['shopName']; ?></p>
     </div>
-     <p style="width: 220px"><b><a href=""><?= $row['productName']; ?></a></b></p>
+     <p style="width: 220px"><b><a href="product_page.php?pId=<?= $row['id']; ?>"><?= $row['productName']; ?></a></b></p>
      <span data-currency-iso="BDT">৳</span> <?= $row['price']; ?><br>
 
  

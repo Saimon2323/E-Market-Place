@@ -1,9 +1,7 @@
 <?php
-
-    include ('../login-system/db.php');
-
-
 if(!isset($_SESSION)) session_start();
+
+include ('../login-system/db.php');
 
 $email = $_SESSION['email'];
 $result = $mysqli->query("SELECT * FROM store WHERE email='$email'");
@@ -71,7 +69,7 @@ else{
 
 //        $mysqli->query($query);
         mysqli_query($mysqli,$query);
-        $message = "Your product upload successfully.\\nThank you.";
+        $message = "Your product has been uploaded successfully.\\nThank you.";
           echo "<script type='text/javascript'>alert('$message');</script>";
           header("Refresh:0; url=../source/new_store_description.php");
 
@@ -114,7 +112,7 @@ else{
     if(isset($_GET['del'])){
         $id = $_GET['del'];
         mysqli_query($mysqli, " DELETE FROM productlist WHERE id='$id'");
-        $message = "Your product has been updated successfully.\\nThank you.";
+        $message = "Your product has been deleted successfully.\\nThank you.";
         echo "<script type='text/javascript'>alert('$message');</script>";
         header("Refresh:0; url=../source/new_store_description.php");
     }//end of delete
