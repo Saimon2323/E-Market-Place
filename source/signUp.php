@@ -38,13 +38,13 @@
     <input  type="text" placeholder="Enter your name" name="username" required>
 
     <label><b>Email</b></label><br>
-    <input " type="email" placeholder="Enter Email" name="email" required><br>
+    <input type="email" placeholder="Enter Email" name="email" required><br>
 
     <label><b>Mobile Number</b></label><br>
-    <input  type="number" placeholder="Mobile Number" name="phone" required><br>
+    <input type="number" placeholder="Mobile Number" name="phone" required><br>
 
     <label for="psw"><b>Password</b></label>
-    <input " type="password" placeholder="Enter Password" id="psw" name="password"  required>
+    <input type="password" placeholder="Enter Password" id="psw" name="password"  required>
    
 
     <label><b>Repeat Password</b></label>
